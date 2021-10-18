@@ -3,6 +3,7 @@ import pic from '../public/images/cardone.jpg'
 import cardtwo from '../public/images/cardtwo.jpg'
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
+import Link from "next/dist/client/link"
 
 
 function about() {
@@ -30,7 +31,11 @@ function about() {
                                 <div className="mt-4 text-green-600 text-center">
                                     <h1 className="text-xl font-bold">Traditional Yoga</h1>
                                     <p className="mt-4 text-gray-600">Yoga performed with tradional asanas and meditation</p>
-                                    <button className="mt-8 mb-4 py-2 px-14 rounded-full bg-green-600 text-white tracking-widest hover:bg-green-500 transition duration-200">MORE</button>
+                                    <Link href="/tryoga">
+                                        <button className="mt-8 mb-4 py-2 px-14 rounded-full bg-green-600 text-white tracking-widest hover:bg-green-500 transition duration-200">
+                                            MORE
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
