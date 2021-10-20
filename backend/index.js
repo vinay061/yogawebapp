@@ -74,3 +74,4 @@ app.listen(port, () => {
         console.log('Database connected')
     })
 })
+
