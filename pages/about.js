@@ -27,7 +27,6 @@ function about() {
                         <div className="mt-16 py-4 px-4 bg-whit w-72 bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:scale-110 transition duration-500 mx-auto md:mx-0">
                             <div className="w-sm">
                                 <Image src={pic} className='' alt="pic of yog" />
-                                <img className="w-64" src="" alt="" />
                                 <div className="mt-4 text-green-600 text-center">
                                     <h1 className="text-xl font-bold">Hatha Yoga</h1>
                                     <p className="mt-4 text-gray-600">Yoga performed with tradional asanas and meditation</p>
@@ -56,7 +55,6 @@ function about() {
                         <div className="mt-16 py-4 px-4 bg-whit w-72 bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:scale-110 transition duration-500 mx-auto md:mx-0">
                             <div className="w-sm">
                                 <Image src={pic} alt="pic of yog" />
-                                <img className="w-64" src="" alt="" />
                                 <div className="mt-4 text-green-600 text-center">
                                     <h1 className="text-xl font-bold">Running / Joging Yoga</h1>
                                     <p className="mt-4 text-gray-600">For people who love running and help you run better through yogic practices</p>
