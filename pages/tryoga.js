@@ -182,7 +182,7 @@ export default function tryoga() {
                                 <div className="border-t border-gray-200 m-bootom-10 my-2"></div>
                                 <p>Choose the date and time that fits you</p>
                                 <div className="border-t border-gray-200 m-bootom-10 mt-2 mb-4"></div>
-                                <Link href='/Booking'>
+                                <Link href='/Bookingweekly'>
                                     <button
                                         className="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                         type="button">
