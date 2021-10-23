@@ -29,7 +29,7 @@ function about() {
                                 <Image src={pic} className='' alt="pic of yog" />
                                 <img className="w-64" src="" alt="" />
                                 <div className="mt-4 text-green-600 text-center">
-                                    <h1 className="text-xl font-bold">Traditional Yoga</h1>
+                                    <h1 className="text-xl font-bold">Hatha Yoga</h1>
                                     <p className="mt-4 text-gray-600">Yoga performed with tradional asanas and meditation</p>
                                     <Link href="/tryoga">
                                         <button className="mt-8 mb-4 py-2 px-14 rounded-full bg-green-600 text-white tracking-widest hover:bg-green-500 transition duration-200">
@@ -45,8 +45,8 @@ function about() {
                             <div className="w-sm">
                                 <Image src={cardtwo} alt="cardtwo" />
                                 <div className="mt-4 text-green-600 text-center">
-                                    <h1 className="text-xl font-bold">Yoga Asanas</h1>
-                                    <p className="mt-4 text-gray-600">A group of asanas to energise and relax your body</p>
+                                    <h1 className="text-xl font-bold">108 Yoga Asanas</h1>
+                                    <p className="mt-4 text-gray-600">Sun Salutations to increase strength, flexibility and relaxation</p>
                                     <button className="mt-8 mb-4 py-2 px-14 rounded-full bg-green-600 text-white tracking-widest hover:bg-green-500 transition duration-200">MORE</button>
                                 </div>
                             </div>
