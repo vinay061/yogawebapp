@@ -14,7 +14,6 @@ console.log(user)
       { user && 
         <div>
           <p>Welcome image:{user.image}</p>
-          <img src={user.image} alt="avatar" width="100"/>
           <p>Name is: {user.name}</p>
           <button onClick={ () => signOut()} 
           className="h-8 px-4 m-2 text-sm text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg 
