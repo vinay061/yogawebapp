@@ -7,15 +7,20 @@ const Navbar = () => {
         <div>
             <nav className="flex items-center justify-between flex-wrap bg-gray-800 p-6 fixed w-full z-10 top-0">
                 <div className="flex items-center flex-shrink-0 text-white mr-6">
+                    <Link href="/">
                     <a className="text-white no-underline hover:text-white hover:no-underline" href="#">
-                        <span className="text-2xl pl-2"><i className="em em-grinning"></i> BrOY</span>
+                        <span className="text-2xl pl-2"><i className="em em-grinning"></i> BROY</span>
                     </a>
+                    </Link>
+                   
                 </div>
 
                 <div className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
                     <ul className="list-reset lg:flex justify-end flex-1 items-center">
                         <li className="mr-3">
-                            <a className="inline-block py-2 px-4 text-white no-underline" href="#">HOME</a>
+                            <Link href="/">
+                                <a className="inline-block py-2 px-4 text-white no-underline" href="#">HOME</a>
+                            </Link>
                         </li>
                         <li className="mr-3">
                             <a className="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">CLASSES</a>
