@@ -22,6 +22,8 @@ export default async function handler(req, res) {
                 res.status(200).json({success: true, data: customerdata})
             }
             catch(error){
+                console.log(error.message)
+                console.error(error.message)
                 res.status(400).json({success: false, info: 'Unable to insert the details'})
             }
             break
