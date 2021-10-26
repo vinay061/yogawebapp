@@ -6,19 +6,19 @@ const BookingSchema = new mongoose.Schema({
         required: true
     },
     bookingdayone: {
-        type: Date,
+        type: String,
         required: true
     },
     bookingdaytwo: {
-        type: Date,
+        type: String,
         required: true
     },
     bookingdaythree: {
-        type: Date,
+        type: String,
         required: true
     },
     bookingdayfour: {
-        type: Date,
+        type: String,
         required: true
     },
     email: {
