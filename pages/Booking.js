@@ -118,7 +118,7 @@ export default function Booking() {
 
         //mongodb data fetch and insert
         try{
-            const res = await fetch('http://localhost:3000/api/dates', {
+            const res = await fetch('/api/dates', {
                 method: 'POST',
                 headers:{
                     "Accept": "application/json",
