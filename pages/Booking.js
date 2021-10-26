@@ -29,14 +29,14 @@ export default function Booking() {
 
 
     //testing time conversion
-    const testDate = new Date()
-    const luxTime = 'Europe/Luxembourg'
+    // const testDate = new Date()
+    // const luxTime = 'Europe/Luxembourg'
     
-    const luxDate = utcToZonedTime(testDate, luxTime)
+    // const luxDate = utcToZonedTime(testDate, luxTime)
     
-    format(luxDate, 'yyyy-MM-dd HH:mm:ss zzz', { timeZone: 'Europe/Luxembourg'})
+    // format(luxDate, 'yyyy-MM-dd HH:mm:ss zzz', { timeZone: 'Europe/Luxembourg'})
    
-    console.log(`Lux Time: ${ format(luxDate, 'yyyy-MM-dd HH:mm:ss zzz', { timeZone: 'Europe/Luxembourg'})}`)
+    // console.log(`Lux Time: ${ format(luxDate, 'yyyy-MM-dd HH:mm:ss zzz', { timeZone: 'Europe/Luxembourg'})}`)
 
     //converting date and time
     const firstday = new Date(dayOne)
@@ -53,8 +53,8 @@ export default function Booking() {
     const formatDayThree = format(zonedDayThree, 'yyyy-MM-dd HH:mm:ss zzz', {timeZone: 'Europe/Luxembourg'})
     const formatDayFour = format(zonedDayFour, 'yyyy-MM-dd HH:mm:ss zzz', {timeZone: 'Europe/Luxembourg'})
 
-    console.log(` UTC Z1: ${zonedDayOne};; Z2: ${zonedDayTwo};; Z3: ${zonedDayThree}`)
-    console.log(`Format F1: ${formatDayOne};; F2: ${formatDayTwo};; F3: ${formatDayThree}`)
+    // console.log(` UTC Z1: ${zonedDayOne};; Z2: ${zonedDayTwo};; Z3: ${zonedDayThree}`)
+    // console.log(`Format F1: ${formatDayOne};; F2: ${formatDayTwo};; F3: ${formatDayThree}`)
 
    
     const dateSept = [new Date(2021, 7, 31), new Date(2021, 8, 2),
@@ -84,7 +84,7 @@ export default function Booking() {
 
     const months = new Date()
     const currentMonth = months.toLocaleString('default', { month: 'long'})
-    console.log(currentMonth)
+    // console.log(currentMonth)
 
     const timeExcluded = [setHours(setMinutes(new Date(),0), 13),
                           setHours(setMinutes(new Date(), 0), 14),
@@ -110,11 +110,11 @@ export default function Booking() {
         const hour = fdate.getUTCHours()
         const minute = fdate.getUTCMinutes()
         const second = fdate.getUTCSeconds()
-        console.log(`Hour: ${hour}; Minute: ${minute}; Second: ${second}`)
+        //console.log(`Hour: ${hour}; Minute: ${minute}; Second: ${second}`)
         //const parsedata= JSON.parse(dayOne)
         const stringifydata = JSON.stringify(dayOne)
         //console.log(`Parsing: ${parsedata}`)
-        console.log(`Stringify: ${stringifydata}`)
+        //console.log(`Stringify: ${stringifydata}`)
 
         //mongodb data fetch and insert
         try{
