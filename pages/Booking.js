@@ -104,21 +104,21 @@ export default function Booking() {
         );
     }
     
-    async function submit() {
+    const submit= async () => {
         
-        const fdate= new Date(dayOne)
-        const hour = fdate.getUTCHours()
-        const minute = fdate.getUTCMinutes()
-        const second = fdate.getUTCSeconds()
+        //const fdate= new Date(dayOne)
+        // const hour = fdate.getUTCHours()
+        // const minute = fdate.getUTCMinutes()
+        // const second = fdate.getUTCSeconds()
         //console.log(`Hour: ${hour}; Minute: ${minute}; Second: ${second}`)
         //const parsedata= JSON.parse(dayOne)
-        const stringifydata = JSON.stringify(dayOne)
+        //const stringifydata = JSON.stringify(dayOne)
         //console.log(`Parsing: ${parsedata}`)
         //console.log(`Stringify: ${stringifydata}`)
 
         //mongodb data fetch and insert
-        try{
-            const res = await fetch('/api/dates', {
+            try{
+                const res = await fetch('/api/dates', {
                 method: 'POST',
                 headers:{
                     "Accept": "application/json",
@@ -133,12 +133,14 @@ export default function Booking() {
                     email: emailUser
                 })
             })
-        }
+            }
+            catch(error){
+                console.log(error)
+            }
+            
+        
 
-        catch(error){
-            console.log(error)
-        }
-
+        
         //node js api post
         // axios.post("http://localhost:5000/api/insert", {
         //     email: emailUser,
@@ -371,17 +373,22 @@ export default function Booking() {
 
                         <div className="container flex items-center justify-center bg-gray-500 mx-auto pt-4 mb-5"> {/**md:py-10 increses the padding for medium screen */}
                             <div className="flex">
-                                <div className="mb-3 pt-0">
-                                <Link href='/Bookingweekly'>
-                                <button type="submit" onClick={
-                                    () => {
-                                        submit()
-                                    }
-                                } 
-                                className="px-6 py-2 font-semibold select-none rounded-md 
-                                        text-white bg-gray-900 hover:bg-gray-800"
-                                >SUBMIT</button>
-                            </Link>
+                                <div className="mb-3 pt-0 mr-3">
+                                    <button type="submit" onClick={submit} 
+                                        className="px-6 py-2 font-semibold select-none rounded-md 
+                                            text-white bg-gray-900 hover:bg-gray-800"
+                                    >
+                                        SUBMIT DETAILS
+                                    </button>
+                                </div>
+                                <div className="mb-3 pt-0 ml-3">
+                                    <Link href='/Bookingweekly'>
+                                        <button type="submit" 
+                                                className="px-6 py-2 font-semibold select-none rounded-md 
+                                                    text-white bg-gray-900 hover:bg-gray-800"
+                                            >NEXT
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>    
