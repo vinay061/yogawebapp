@@ -9,7 +9,7 @@ import Navbar  from '../components/Navbar'
 import Link from 'next/dist/client/link'
 import Footer from '../components/Footer'
 import fetch from 'isomorphic-unfetch'
-//import Taildate from '../components/Taildate'
+//import Taildate from '../components/Taidate'
 // import enGB  from 'date-fns/locale/en-GB'
 
 // enGB.code= 'en-GB'
@@ -20,10 +20,10 @@ const { zonedTimeToUtc, utcToZonedTime, format } = require('date-fns-tz')
 
 export default function Booking() {
 
-    const [dayOne, setDayOne] = useState(new Date())
-    const [dayTwo, setDayTwo] = useState(new Date())
-    const [dayThree, setDayThree] = useState(new Date())
-    const [dayFour, setDayFour] = useState(new Date())
+    const [dayOne, setDayOne] = useState(null)
+    const [dayTwo, setDayTwo] = useState(null)
+    const [dayThree, setDayThree] = useState(null)
+    const [dayFour, setDayFour] = useState(null)
     const [emailUser, setEmailUser] = useState('')
     const [location, setLocation] = useState('Flow Studio')
 
@@ -93,7 +93,7 @@ export default function Booking() {
 
      const MyContainer = ({className, children}) => {
         return(
-            <div style={{ marginLeft: "600px"}}>
+            <div className="">
                 <CalendarContainer className={className}>
                     <div style={{background: "#f0f0f0"}}>
                         What is your favorite day?
@@ -224,62 +224,64 @@ export default function Booking() {
                 />
             </div>
             :
-            <div className="mt-28">
-                    <div className="container flex items-center justify-center bg-gray-500 mx-auto pt-4">
-                    <div className="flex">
-                                <label className="font-bold mb-1 mr-2 text-white block">
-                                        Select Location
-                                </label>
-                                <div className="mb-3 pt-0 ml-20">
+            <div className="shadow-md rounded-md bg-gray-500 mt-28 mx-3 mb-5">
+                    <div className="container flex items-center justify-center  mx-auto pt-4">
+                        <div className="sm:flex md:flex lg:flex xl:flex 2xl:flex">
+                            <label className="font-bold mb-1 mr-2 text-white block">
+                                Select Location
+                            </label>
+                            <div className="mb-3 pt-0 sm:ml-20 md:ml-20 lg:ml-20 xl:ml:20">
                                 <select className="form-select block w-full mt-1" 
-                                        onChange = {(e)=> {
-                                            setLocation(e.target.value)
-                                        }}    
-                                    >
+                                            onChange = {(e)=> {
+                                                setLocation(e.target.value)
+                                            }}    
+                                        >
                                     <option>Hollerich Well-Being Studio</option>
                                     <option>Hamm Happy Place</option>
                                 </select>
-                                </div>
                             </div>
+                        </div>
                     </div>
                 {/**Day One */}
                 <div className="container flex items-center justify-center bg-gray-500 mx-auto pt-4">
-                    <div className="flex">
+                    <div className="sm:flex md:flex lg:flex xl:flex 2xl:flex">
                         <label className="font-bold mb-1 mr-4 text-white block">
                             Select Date & Time for Day One
                         </label>
                         <div className="mb-3 pt-0">
-                        <DatePicker
-                            selected={dayOne}
-                            onChange={(date) => setDayOne(date)}
-                            calendarContainer={MyContainer}
-                            excludeDates={dateOct}
-                            filterDate={isWeek}
-                            showTimeSelect
-                            timeFormat="p"
-                            timeIntervals={60}
-                            placeholderText="Click to select a date and time"
-                            minTime={setHours(setMinutes(new Date(), 0), 6)}
-                            maxTime={setHours(setMinutes(new Date(), 30), 19)}
-                            excludeTimes={timeExcluded}
-                            dateFormat="MMMM, d;  h:mm aa"
-                            className="px-2 py-1 placeholder-gray-400 text-gray-600 
-                                        relative bg-white bg-white rounded text-sm border 
-                                        border-green-400 outline-none focus:outline-none 
-                                        focus:ring w-full mb-2"
-                        />
+                            <DatePicker
+                                selected={dayOne}
+                                minDate={new Date()}
+                                onChange={(date) => setDayOne(date)}
+                                calendarContainer={MyContainer}
+                                excludeDates={dateOct}
+                                filterDate={isWeek}
+                                showTimeSelect
+                                timeFormat="p"
+                                timeIntervals={60}
+                                placeholderText="Click to select a date and time"
+                                minTime={setHours(setMinutes(new Date(), 0), 6)}
+                                maxTime={setHours(setMinutes(new Date(), 30), 19)}
+                                excludeTimes={timeExcluded}
+                                dateFormat="MMMM, d;  h:mm aa"
+                                className="px-2 py-1 placeholder-gray-400 text-gray-600 
+                                            relative bg-white bg-white rounded text-sm border 
+                                            border-green-400 outline-none focus:outline-none 
+                                            focus:ring w-full mb-2"
+                            />
                         </div>
                     </div>
                 </div>
                 {/**Day Two */}
                 <div className="container flex items-center justify-center bg-gray-500 mx-auto pt-4"> {/**md:py-10 increses the padding for medium screen */}
-                            <div className="flex">
+                            <div className="sm:flex md:flex lg:flex xl:flex 2xl:flex">
                                 <label className="font-bold mb-1 mr-4 text-white block">
                                         Select Date & Time for Day Two
                                 </label>
                                 <div className="mb-3 pt-0">
                                 <DatePicker
                                     selected={dayTwo}
+                                    minDate={new Date()}
                                     onChange={(date) => setDayTwo(date)}
                                     calendarContainer={MyContainer}
                                     excludeDates={dateOct}
@@ -302,13 +304,14 @@ export default function Booking() {
                         </div>  
                     {/**Day Three */}
                     <div className="container flex items-center justify-center bg-gray-500 mx-auto pt-4"> {/**md:py-10 increses the padding for medium screen */}
-                            <div className="flex">
+                            <div className="sm:flex md:flex lg:flex xl:flex 2xl:flex">
                                 <label className="font-bold mb-1 mr-2 text-white block">
                                         Select Date & Time for Day Three
                                 </label>
                                 <div className="mb-3 pt-0">
                                 <DatePicker
                                     selected={dayThree}
+                                    minDate={new Date()}
                                     onChange={(date) => setDayThree(date)}
                                     calendarContainer={MyContainer}
                                     excludeDates={dateOct}
@@ -331,13 +334,14 @@ export default function Booking() {
                         </div>
                         {/**Day Four */}
                         <div className="container flex items-center justify-center bg-gray-500 mx-auto pt-4"> {/**md:py-10 increses the padding for medium screen */}
-                            <div className="flex">
+                            <div className="sm:flex md:flex lg:flex xl:flex 2xl:flex">
                                 <label className="font-bold mb-1 mr-2 text-white block">
                                         Select Date & Time for Day Four
                                 </label>
                                 <div className="mb-3 pt-0">
                                 <DatePicker
                                     selected={dayFour}
+                                    minDate={new Date()}
                                     onChange={(date) => setDayFour(date)}
                                     calendarContainer={MyContainer}
                                     excludeDates={dateOct}
@@ -360,7 +364,7 @@ export default function Booking() {
                         </div>
 
                         <div className="container flex items-center justify-center bg-gray-500 mx-auto pt-4"> {/**md:py-10 increses the padding for medium screen */}
-                            <div className="flex">
+                            <div className="sm:flex md:flex lg:flex xl:flex 2xl:flex">
                                 <label className="font-bold mb-1 mr-4 text-white block">
                                         Please Enter Your eMail Address
                                 </label>
@@ -371,21 +375,34 @@ export default function Booking() {
                                 </div>
                             </div>
                         </div>
-
-                        <div className="container flex items-center justify-center bg-gray-500 mx-auto pt-4 mb-5"> {/**md:py-10 increses the padding for medium screen */}
-                            <div className="flex">
-                                <div className="mb-3 pt-0 mr-3">
-                                    <Link href='/Bookingweekly'>
-                                        <button type="submit" onClick={submit} 
-                                            className="px-6 py-2 font-semibold select-none rounded-md 
-                                                text-white bg-gray-900 hover:bg-gray-800"
-                                        >
-                                            SUBMIT
-                                        </button>
-                                    </Link>
-                                </div>
+                        { dayOne && dayTwo && dayThree && dayFour && (
+                            <div className="text-center text-white">
+                                <p>
+                                    Thank you for selecting the dates from<br></br> 
+                                    Day One:{" "}{formatDayOne} {" "}<br></br>
+                                    Day Two:{" "}{formatDayTwo} {" "}<br></br>
+                                    Day Three:{" "}{formatDayThree} {" "}<br></br>
+                                    Day Four:{" "}{formatDayFour} {" "}<br></br>
+                                    Please ensure the correct email id is entered. Also, please select only the first day in the following page.
+                                </p>
+                                <div className="container flex items-center justify-center bg-gray-500 mx-auto pt-4 mb-5"> {/**md:py-10 increses the padding for medium screen */}
+                                    <div className="flex">
+                                        <div className="mb-3 pt-0 mr-3">
+                                            <Link href='/Bookingweekly'>
+                                                <button type="submit" onClick={submit} 
+                                                    className="px-6 py-2 font-semibold select-none rounded-md 
+                                                        text-white bg-gray-900 hover:bg-gray-800"
+                                                >
+                                                    SUBMIT
+                                                </button>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>  
                             </div>
-                        </div>    
+                            
+                        )}
+                          
                 
             </div>
             }
