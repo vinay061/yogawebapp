@@ -23,7 +23,9 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li className="mr-3">
-                            <a className="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">CLASSES</a>
+                            <Link href="/Directbooking">
+                            <a className="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">BOOKING</a>
+                            </Link>
                         </li>
                         <li className="mr-3">
                             <Link href="/about">
@@ -31,14 +33,16 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li className="mr-3">
-                            <a className="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">LOG IN</a>
+                            <Link href="/Booking">
+                            <a className="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">WEEKLY BOOKING</a>
+                            </Link>
                         </li>
                         <li className="mr-3">
                             <Link href='/bar'>
-                                <a className="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4">Nbar</a>
+                                <a className="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4">MONTHLY BOOKING</a>
                             </Link>
                             <Link href='/test'>
-                                <a className="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4">TEST</a>
+                                <a className="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4">SINGLE DAY BOOKING</a>
                             </Link>
                         </li>
                     </ul>
@@ -61,14 +65,22 @@ const Navbar = () => {
                 show ?
                     <nav className="mt-20 bg-gray-700 text-white">
                         <ul className="ml-10">
-                            <li className="py-2">HOME</li>
                             <li className="py-2">
-                                <Link href="/about">
-                                    <a className="hover:text-gray-200">ABOUT</a>
+                                <Link href="/">
+                                    <a href="#">HOME</a>
                                 </Link>
                             </li>
-                            <li className="py-2">YOGA TYPES</li>
-                            <li className="py-2">CLASSES</li>
+                            <li className="py-2">
+                               <Link href="/Directbooking">
+                                   <a className="hover:text-gray-200">BOOKING</a>
+                               </Link>
+                            </li>
+                            <li className="py-2">
+                                 <Link href="/about">
+                                   <a className="hover:text-gray-200">ABOUT</a>
+                                </Link>
+                            </li>
+                            
                         </ul>
                     </nav>
                     :
