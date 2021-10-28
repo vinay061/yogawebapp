@@ -3,13 +3,12 @@ import Link from 'next/dist/client/link'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Image from 'next/dist/client/image'
-import picone from '../public/images/cardone.jpg'
 import cobra from '../public/images/cobra.png'
 import mind from '../public/images/mind.png'
 import energy from '../public/images/energy.jpg'
 import joy from '../public/images/joy.png'
 import gyoga from '../public/images/groupyoga.jpg'
-
+//px-40 py-84 mt-5 mb-4 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5
 export default function tryoga() {
     return (
         <div>
@@ -35,14 +34,7 @@ export default function tryoga() {
 
   </div>
   {/* <!-- Card --> */}
-            <div className="container mx-auto bg-yellow-200">
-            <div className="p-10">
-            <Image src={gyoga} 
-                   alt="group yoga"
-                  />
-            </div>
-           
-            </div>
+          
             
             
             
@@ -121,6 +113,7 @@ export default function tryoga() {
                     {/* <!-- Card four --> */}
                 </div>
             </div>
+
             <div className="space-y-2 lg:space-y-4 mt-20">
                             <h2 className="text-5xl text-center text-green-600 font-bold ">Our services and plans</h2> {/**sm:text-3xl */}
                             <p className="text-2xl w-full text-center text-green-600">You can choose different plans as per your needs</p> {/**sm:w-1/2 xl:w-80 md:text-lg*/}

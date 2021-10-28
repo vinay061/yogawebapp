@@ -1,4 +1,5 @@
 import react from 'react'
+import Link from 'next/dist/client/link'
 
 const Footer = () => {
     return (
@@ -9,23 +10,29 @@ const Footer = () => {
                     <div className="sm:flex sm:mt-8">
                         <div className="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
                             <div className="flex flex-col">
-                                <span className="font-bold text-white uppercase mb-2">Footer header 1</span>
-                                <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">link 1</a></span>
-                                <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">link 1</a></span>
-                                <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">link 1</a></span>
+                                <span className="font-bold text-white uppercase mb-2">BOOKINGS</span>
+                                <span className="my-2">
+                                    <Link href="/Booking">
+                                        <a href="#" className="text-white  text-md hover:text-blue-500">WEEKLY CLASS BOOKING</a>
+                                    </Link>
+                                </span>
+                                <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">MONTHLY CLASS BOOKING</a></span>
+                                <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">SINGLE DAY BOOKING</a></span>
                             </div>
-                            <div className="flex flex-col">
+                            {/**Footer header 2 commented */}
+                            {/* <div className="flex flex-col">
                                 <span className="font-bold text-white uppercase mt-4 md:mt-0 mb-2">Footer header 2</span>
                                 <span className="my-2"><a href="#" className="text-white text-md hover:text-blue-500">link 1</a></span>
                                 <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">link 1</a></span>
                                 <span className="my-2"><a href="#" className="text-white text-md hover:text-blue-500">link 1</a></span>
-                            </div>
-                            <div className="flex flex-col">
+                            </div> */}
+                            {/**Footer header 3 commented */}
+                            {/* <div className="flex flex-col">
                                 <span className="font-bold text-white uppercase mt-4 md:mt-0 mb-2">Footer header 3</span>
                                 <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">link 1</a></span>
                                 <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">link 1</a></span>
                                 <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">link 1</a></span>
-                            </div>
+                            </div> */}
                             <div className="flex flex-col">
                                 <span className="font-bold text-white uppercase mt-4 md:mt-0 mb-2">Follow us on</span>
                                 <button className="bg-blue-500 px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded transform hover:scale-110 transition duration-500">
