@@ -4,13 +4,19 @@ import cardtwo from '../public/images/cardtwo.jpg'
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import Link from "next/dist/client/link"
-
+import Head from "next/head"
 
 function about() {
     return (
         <div>
+            <Head>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <meta charSet="utf-8" />
+                <title>Breath of Yoga</title>
+                <meta name="description" content="Enjoy Yoga workout for your body, breath and mind in Luxembourg " />
+                <meta name="google-site-verification" content="zX1PEdcO-DPbHLwHEXuhKeyNuh9AgAK3cfvx1zgUbYA" />
+            </Head>
             {/*<!-- component -->*/}
-
             <header>
                 {/*<!-- Navbar -->*/}
                 <Navbar/>
