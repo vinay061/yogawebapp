@@ -38,10 +38,10 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li className="mr-3">
-                            <Link href='/bar'>
+                            <Link href='#'>
                                 <a className="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4">MONTHLY BOOKING</a>
                             </Link>
-                            <Link href='/test'>
+                            <Link href='#'>
                                 <a className="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4">SINGLE DAY BOOKING</a>
                             </Link>
                         </li>
