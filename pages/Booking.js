@@ -9,6 +9,7 @@ import Navbar  from '../components/Navbar'
 import Link from 'next/dist/client/link'
 import Footer from '../components/Footer'
 import fetch from 'isomorphic-unfetch'
+import Head from 'next/head'
 //import Taildate from '../components/Taidate'
 // import enGB  from 'date-fns/locale/en-GB'
 
@@ -25,18 +26,7 @@ export default function Booking() {
     const [dayThree, setDayThree] = useState(null)
     const [dayFour, setDayFour] = useState(null)
     const [emailUser, setEmailUser] = useState('')
-    const [location, setLocation] = useState('Flow Studio')
-
-
-    //testing time conversion
-    // const testDate = new Date()
-    // const luxTime = 'Europe/Luxembourg'
-    
-    // const luxDate = utcToZonedTime(testDate, luxTime)
-    
-    // format(luxDate, 'yyyy-MM-dd HH:mm:ss zzz', { timeZone: 'Europe/Luxembourg'})
-   
-    // console.log(`Lux Time: ${ format(luxDate, 'yyyy-MM-dd HH:mm:ss zzz', { timeZone: 'Europe/Luxembourg'})}`)
+    const [location, setLocation] = useState('')
 
     //converting date and time
     const firstday = new Date(dayOne)
@@ -53,23 +43,20 @@ export default function Booking() {
     const formatDayThree = format(zonedDayThree, 'yyyy-MM-dd HH:mm:ss zzz', {timeZone: 'Europe/Luxembourg'})
     const formatDayFour = format(zonedDayFour, 'yyyy-MM-dd HH:mm:ss zzz', {timeZone: 'Europe/Luxembourg'})
 
-    // console.log(` UTC Z1: ${zonedDayOne};; Z2: ${zonedDayTwo};; Z3: ${zonedDayThree}`)
-    // console.log(`Format F1: ${formatDayOne};; F2: ${formatDayTwo};; F3: ${formatDayThree}`)
-
-   
+    //display only selected dates of September
     const dateSept = [new Date(2021, 7, 31), new Date(2021, 8, 2),
                       new Date(2021, 8, 7), new Date(2021, 8, 9),
                       new Date(2021, 8, 14), new Date(2021, 8, 16),
                       new Date(2021, 8, 21), new Date(2021, 8, 23),
                       new Date(2021, 8, 28),new Date(2021, 8, 30)
                      ]
-
+    //display only selected dates of September
     const dateOct = [new Date(2021, 9, 5), new Date(2021, 9, 7), 
                      new Date(2021, 9, 12),new Date(2021, 9, 14),
                      new Date(2021, 9, 19),new Date(2021, 9, 21),
                      new Date(2021, 9, 26),new Date(2021, 9, 28)
                     ]
-
+    //display only selected dates of November
     const dateNov = [new Date(2021, 11, 2), new Date(2021, 11, 4),
                      new Date(2021, 11, 9), new Date(2021, 11, 11),
                      new Date(2021, 11, 16), new Date(2021, 11, 18),
@@ -95,8 +82,8 @@ export default function Booking() {
         return(
             <div className="">
                 <CalendarContainer className={className}>
-                    <div style={{background: "#f0f0f0"}}>
-                        What is your favorite day?
+                    <div style={{background: "#ff0000"}}>
+                        Select Date and Time
                     </div>
                     <div style={{ position: "relative"}}>{children}</div>
                 </CalendarContainer>
@@ -104,20 +91,12 @@ export default function Booking() {
         );
     }
     
-    const submit= async () => {
-        
-        //const fdate= new Date(dayOne)
-        // const hour = fdate.getUTCHours()
-        // const minute = fdate.getUTCMinutes()
-        // const second = fdate.getUTCSeconds()
-        //console.log(`Hour: ${hour}; Minute: ${minute}; Second: ${second}`)
-        //const parsedata= JSON.parse(dayOne)
-        //const stringifydata = JSON.stringify(dayOne)
-        //console.log(`Parsing: ${parsedata}`)
-        //console.log(`Stringify: ${stringifydata}`)
+    const handleDateChangeRaw = (Event) => {
+        Event.preventDefault()
+    }
 
-        //mongodb data fetch and insert
-            try{
+    const submit= async () => {
+               try{
                 const res = await fetch('/api/dates', {
                 method: 'POST',
                 headers:{
@@ -138,32 +117,16 @@ export default function Booking() {
             catch(error){
                 console.log(error)
             }
-            
-        
-
-        
-        //node js api post
-        // axios.post("http://localhost:5000/api/insert", {
-        //     email: emailUser,
-        //     booking_day_one: formatDayOne,
-        //     booking_day_two: formatDayTwo,
-        //     booking_day_three: formatDayThree,
-        //     booking_day_four: formatDayFour,
-        //     location: location 
-        //      })
-        //      .then(res => {
-        //          console.log(res)
-        //          console.log(res.data)
-        //          console.log(typeof(res.data))
-        //          console.log('Posted booking details')
-        //      })
-        //      .catch(err => {
-        //          console.log(err)
-        //      })
-
-     }
+    }
      return (
         <div>
+            <Head>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <meta charSet="utf-8" />
+                <title>Breath of Yoga</title>
+                <meta name="description" content="Enjoy Yoga workout for your body, breath and mind in Luxembourg " />
+                <meta name="google-site-verification" content="zX1PEdcO-DPbHLwHEXuhKeyNuh9AgAK3cfvx1zgUbYA" />
+            </Head>
             <Navbar/>
             
            
@@ -236,8 +199,9 @@ export default function Booking() {
                                                 setLocation(e.target.value)
                                             }}    
                                         >
-                                    <option>Hollerich Well-Being Studio</option>
-                                    <option>Hamm Happy Place</option>
+                                    <option>Select Studio Location</option>
+                                    <option>Hollerich: Well-Being Studio</option>
+                                    <option>Beggen: Rythm and Soul</option>
                                 </select>
                             </div>
                         </div>
@@ -252,6 +216,7 @@ export default function Booking() {
                             <DatePicker
                                 selected={dayOne}
                                 minDate={new Date()}
+                                onChangeRaw={handleDateChangeRaw}
                                 onChange={(date) => setDayOne(date)}
                                 calendarContainer={MyContainer}
                                 excludeDates={dateOct}
@@ -282,6 +247,7 @@ export default function Booking() {
                                 <DatePicker
                                     selected={dayTwo}
                                     minDate={new Date()}
+                                    onChangeRaw={handleDateChangeRaw}
                                     onChange={(date) => setDayTwo(date)}
                                     calendarContainer={MyContainer}
                                     excludeDates={dateOct}
@@ -312,6 +278,7 @@ export default function Booking() {
                                 <DatePicker
                                     selected={dayThree}
                                     minDate={new Date()}
+                                    onChangeRaw={handleDateChangeRaw}
                                     onChange={(date) => setDayThree(date)}
                                     calendarContainer={MyContainer}
                                     excludeDates={dateOct}
@@ -342,6 +309,7 @@ export default function Booking() {
                                 <DatePicker
                                     selected={dayFour}
                                     minDate={new Date()}
+                                    onChangeRaw={handleDateChangeRaw}
                                     onChange={(date) => setDayFour(date)}
                                     calendarContainer={MyContainer}
                                     excludeDates={dateOct}
