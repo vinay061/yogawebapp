@@ -253,6 +253,7 @@ export default function Booking() {
                                     selected={dayTwo}
                                     minDate={new Date()}
                                     onChangeRaw={handleDateChangeRaw}
+                                    onFocus={handleKeyboardTrigger}
                                     onChange={(date) => setDayTwo(date)}
                                     calendarContainer={MyContainer}
                                     excludeDates={dateOct}
@@ -284,6 +285,7 @@ export default function Booking() {
                                     selected={dayThree}
                                     minDate={new Date()}
                                     onChangeRaw={handleDateChangeRaw}
+                                    onFocus={handleKeyboardTrigger}
                                     onChange={(date) => setDayThree(date)}
                                     calendarContainer={MyContainer}
                                     excludeDates={dateOct}
@@ -315,6 +317,7 @@ export default function Booking() {
                                     selected={dayFour}
                                     minDate={new Date()}
                                     onChangeRaw={handleDateChangeRaw}
+                                    onFocus={handleKeyboardTrigger}
                                     onChange={(date) => setDayFour(date)}
                                     calendarContainer={MyContainer}
                                     excludeDates={dateOct}
