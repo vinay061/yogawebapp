@@ -82,7 +82,7 @@ export default function Booking() {
         return(
             <div className="">
                 <CalendarContainer className={className}>
-                    <div style={{background: "#ff0000"}}>
+                    <div style={{background: "#ff0000"}} className="text-center">
                         Select Date and Time
                     </div>
                     <div style={{ position: "relative"}}>{children}</div>
@@ -93,6 +93,10 @@ export default function Booking() {
     
     const handleDateChangeRaw = (Event) => {
         Event.preventDefault()
+    }
+
+    const handleKeyboardTrigger = (e) => {
+        e.target.readOnly = true
     }
 
     const submit= async () => {
@@ -217,6 +221,7 @@ export default function Booking() {
                                 selected={dayOne}
                                 minDate={new Date()}
                                 onChangeRaw={handleDateChangeRaw}
+                                onFocus={handleKeyboardTrigger}
                                 onChange={(date) => setDayOne(date)}
                                 calendarContainer={MyContainer}
                                 excludeDates={dateOct}
