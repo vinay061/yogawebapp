@@ -1,10 +1,18 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import Head from 'next/head'
 
 export default function Bookingweekly() {
     return (
         <div>
+            <Head>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <meta charSet="utf-8" />
+                <title>Breath of Yoga</title>
+                <meta name="description" content="Enjoy Yoga workout for your body, breath and mind in Luxembourg " />
+                <meta name="google-site-verification" content="zX1PEdcO-DPbHLwHEXuhKeyNuh9AgAK3cfvx1zgUbYA" />
+            </Head>
             <Navbar/>
             <h1 className="mt-28 text-center">Book Weekly Sessions</h1>
             <div className="text-center">

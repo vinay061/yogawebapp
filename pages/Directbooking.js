@@ -8,10 +8,18 @@ import mind from '../public/images/mind.png'
 import energy from '../public/images/energy.jpg'
 import joy from '../public/images/joy.png'
 import gyoga from '../public/images/groupyoga.jpg'
+import Head from 'next/head'
 //px-40 py-84 mt-5 mb-4 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5
 export default function tryoga() {
     return (
         <div>
+            <Head>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <meta charSet="utf-8" />
+                <title>Breath of Yoga</title>
+                <meta name="description" content="Enjoy Yoga workout for your body, breath and mind in Luxembourg " />
+                <meta name="google-site-verification" content="zX1PEdcO-DPbHLwHEXuhKeyNuh9AgAK3cfvx1zgUbYA" />
+            </Head>
             <Navbar/>
             <br></br>
             <br></br>
