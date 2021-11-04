@@ -57,26 +57,32 @@ export default function Booking() {
                      new Date(2021, 9, 26),new Date(2021, 9, 28)
                     ]
     //display only selected dates of November
-    const dateNov = [new Date(2021, 11, 2), new Date(2021, 11, 4),
-                     new Date(2021, 11, 9), new Date(2021, 11, 11),
-                     new Date(2021, 11, 16), new Date(2021, 11, 18),
-                     new Date(2021, 11, 23), new Date(2021, 11, 26),
-                     new Date(2021, 11, 30)
+    const dateNov = [new Date(2021, 10, 5),
+                     new Date(2021, 10, 12),
+                     new Date(2021, 10, 19),
+                     new Date(2021, 10, 26),
+                     new Date(2021, 11, 3)
                     ]
-
+    
+    
     const isWeek = (date) => {
         const day = date.getDay()
         return day !==0 && day !==6
     }
+    // to remove Saturday and Sunday => filterDate={isWeek}
 
     const months = new Date()
     const currentMonth = months.toLocaleString('default', { month: 'long'})
     // console.log(currentMonth)
 
-    const timeExcluded = [setHours(setMinutes(new Date(),0), 13),
-                          setHours(setMinutes(new Date(), 0), 14),
-                          setHours(setMinutes(new Date(), 0), 15)
+    const timeExcluded = [setHours(setMinutes(new Date(2021,10,1), 0), 11),
+                          setHours(setMinutes(new Date(2021,10,1), 0), 12),
+                          setHours(setMinutes(new Date(2021,10,1), 0), 13),
+                          setHours(setMinutes(new Date(2021,10,1), 0), 14),
+                          setHours(setMinutes(new Date(2021,10,1), 0), 15),
+
                          ]
+    // if particular time need to be excluded then -> excludeTimes={timeExcluded}
 
      const MyContainer = ({className, children}) => {
         return(
@@ -127,8 +133,8 @@ export default function Booking() {
             <Head>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta charSet="utf-8" />
-                <title>Breath of Yoga</title>
-                <meta name="description" content="Enjoy Yoga workout for your body, breath and mind in Luxembourg " />
+                <title>Breath of Yoga |Yoga in Luxembourg| Breath | Mental Health</title>
+                <meta name="description" content="Enjoy Yoga workout for your body, breath and mind in Luxembourg. Lead a stress free and joyful life. Learn the secret to be in the present moment. Breath awareness" />
                 <meta name="google-site-verification" content="zX1PEdcO-DPbHLwHEXuhKeyNuh9AgAK3cfvx1zgUbYA" />
             </Head>
             <Navbar/>
@@ -204,8 +210,8 @@ export default function Booking() {
                                             }}    
                                         >
                                     <option>Select Studio Location</option>
-                                    <option>Hollerich: Well-Being Studio</option>
                                     <option>Beggen: Rythm and Soul</option>
+                                    <option>Hollerich: Well-Being Studio</option>
                                 </select>
                             </div>
                         </div>
@@ -224,14 +230,14 @@ export default function Booking() {
                                 onFocus={handleKeyboardTrigger}
                                 onChange={(date) => setDayOne(date)}
                                 calendarContainer={MyContainer}
-                                excludeDates={dateOct}
-                                filterDate={isWeek}
+                                excludeDates={dateNov}
                                 showTimeSelect
                                 timeFormat="p"
                                 timeIntervals={60}
                                 placeholderText="Click to select a date and time"
                                 minTime={setHours(setMinutes(new Date(), 0), 6)}
-                                maxTime={setHours(setMinutes(new Date(), 30), 19)}
+                                maxTime={setHours(setMinutes(new Date(), 30), 8)}
+                                
                                 excludeTimes={timeExcluded}
                                 dateFormat="MMMM, d;  h:mm aa"
                                 className="px-2 py-1 placeholder-gray-400 text-gray-600 
@@ -256,14 +262,13 @@ export default function Booking() {
                                     onFocus={handleKeyboardTrigger}
                                     onChange={(date) => setDayTwo(date)}
                                     calendarContainer={MyContainer}
-                                    excludeDates={dateOct}
-                                    filterDate={isWeek}
+                                    excludeDates={dateNov}
                                     showTimeSelect
                                     timeFormat="p"
                                     timeIntervals={60}
                                     placeholderText="Click to select a date and time"
                                     minTime={setHours(setMinutes(new Date(), 0), 6)}
-                                    maxTime={setHours(setMinutes(new Date(), 30), 19)}
+                                    maxTime={setHours(setMinutes(new Date(), 30), 8)}
                                     excludeTimes={timeExcluded}
                                     dateFormat="MMMM, d;  h:mm aa"
                                     className="px-2 py-1 placeholder-gray-400 text-gray-600 
@@ -288,14 +293,13 @@ export default function Booking() {
                                     onFocus={handleKeyboardTrigger}
                                     onChange={(date) => setDayThree(date)}
                                     calendarContainer={MyContainer}
-                                    excludeDates={dateOct}
-                                    filterDate={isWeek}
+                                    excludeDates={dateNov}
                                     showTimeSelect
                                     timeFormat="p"
                                     timeIntervals={60}
                                     placeholderText="Click to select a date and time"
                                     minTime={setHours(setMinutes(new Date(), 0), 6)}
-                                    maxTime={setHours(setMinutes(new Date(), 30), 19)}
+                                    maxTime={setHours(setMinutes(new Date(), 30), 8)}
                                     excludeTimes={timeExcluded}
                                     dateFormat="MMMM, d;  h:mm aa"
                                     className="px-2 py-1 placeholder-gray-400 text-gray-600 
@@ -320,14 +324,13 @@ export default function Booking() {
                                     onFocus={handleKeyboardTrigger}
                                     onChange={(date) => setDayFour(date)}
                                     calendarContainer={MyContainer}
-                                    excludeDates={dateOct}
-                                    filterDate={isWeek}
+                                    excludeDates={dateNov}
                                     showTimeSelect
                                     timeFormat="p"
                                     timeIntervals={60}
                                     placeholderText="Click to select a date and time"
                                     minTime={setHours(setMinutes(new Date(), 0), 6)}
-                                    maxTime={setHours(setMinutes(new Date(), 30), 19)}
+                                    maxTime={setHours(setMinutes(new Date(), 30), 8)}
                                     excludeTimes={timeExcluded}
                                     dateFormat="MMMM, d;  h:mm aa"
                                     className="px-2 py-1 placeholder-gray-400 text-gray-600 
@@ -351,7 +354,13 @@ export default function Booking() {
                                 </div>
                             </div>
                         </div>
-                        { dayOne && dayTwo && dayThree && dayFour && (
+
+                        {/** Trial for setting time as per day */}
+                        
+                        
+
+
+                        { dayOne && dayTwo && dayThree && dayFour && emailUser && (
                             <div className="text-center text-white">
                                 <p>
                                     Thank you for selecting the dates from<br></br> 
