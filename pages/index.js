@@ -52,7 +52,7 @@ function about() {
                                 <div className="mt-4 text-green-600 text-center">
                                     <h1 className="text-xl font-bold">108 Yoga Asanas</h1>
                                     <p className="mt-4 text-gray-600">Sun Salutations to increase strength, flexibility and relaxation</p>
-                                    <button className="mt-8 mb-4 py-2 px-14 rounded-full bg-green-600 text-white tracking-widest hover:bg-green-500 transition duration-200">MORE</button>
+                                    <button className="mt-8 mb-4 py-2 px-14 rounded-full bg-green-600 text-white tracking-widest hover:bg-green-500 transition duration-200">Launching Soon</button>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +64,7 @@ function about() {
                                 <div className="mt-4 text-green-600 text-center">
                                     <h1 className="text-xl font-bold">Running / Joging Yoga</h1>
                                     <p className="mt-4 text-gray-600">For people who love running and help you run better through yogic practices</p>
-                                    <button className="mt-8 mb-4 py-2 px-14 rounded-full bg-green-600 text-white tracking-widest hover:bg-green-500 transition duration-200">MORE</button>
+                                    <button className="mt-8 mb-4 py-2 px-14 rounded-full bg-green-600 text-white tracking-widest hover:bg-green-500 transition duration-200">Launching Soon</button>
                                 </div>
                             </div>
                         </div>

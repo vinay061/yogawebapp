@@ -35,7 +35,7 @@ export default function tryoga() {
           <p className="mb-2">This form of yoga focuses on the breath, body, mind and energy</p>
           <p className="text-xl font-semibold">Details</p>
             <ul>
-                <li>Duration: 60-90 mins</li>
+                <li>Duration: 60 mins</li>
                 <li>Main focus: Strength with flexibility and relaxation</li>
                 <li></li>
             </ul>
@@ -143,7 +143,7 @@ export default function tryoga() {
                                     <div className="flex justify-between">
                                         <h3 className="text-xl font-medium">Single Day</h3>
                                         <div className="">
-                                            <span className="text-xl font-medium">€40</span>
+                                            <span className="text-xl font-medium">€35</span>
                                             <span className="text-gray-400">/day</span>
                                         </div>
                                     </div>
@@ -153,15 +153,15 @@ export default function tryoga() {
                                 <div className="border-t border-gray-200 m-bootom-10 my-2"></div>
                                 <p>Duration 60 minutes</p>
                                 <div className="border-t border-gray-200 m-bootom-10 my-2"></div>
-                                <p>Weekly three sessions</p>
+                                <p>Single day session</p>
                                 <div className="border-t border-gray-200 m-bootom-10 my-2"></div>
-                                <p>Choose the date and time that fits you</p>
+                                <p>Choose the location, date and time that fits you</p>
                                 <div className="border-t border-gray-200 m-bootom-10 mt-2 mb-4"></div>
                                 
                                     <button
                                         className="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                         type="button">
-                                        Book Single Day Plan
+                                        Launching Soon
                                     </button>
                                 
                             </div>
@@ -176,7 +176,7 @@ export default function tryoga() {
                                     <div className="flex justify-between">
                                         <h3 className="text-xl font-medium">Weekly plan</h3>
                                         <div className="">
-                                            <span className="text-xl font-medium">€90</span>
+                                            <span className="text-xl font-medium">€100</span>
                                             <span className="text-gray-400">/week</span>
                                         </div>
                                     </div>
@@ -186,11 +186,11 @@ export default function tryoga() {
                                 <div className="border-t border-gray-200 m-bootom-10 my-2"></div>
                                 <p>Duration 60 minutes</p>
                                 <div className="border-t border-gray-200 m-bootom-10 my-2"></div>
-                                <p>Weekly three sessions</p>
+                                <p>Weekly 4 sessions</p>
                                 <div className="border-t border-gray-200 m-bootom-10 my-2"></div>
-                                <p>Choose the date and time that fits you</p>
+                                <p>Choose the location, date and time that fits you</p>
                                 <div className="border-t border-gray-200 m-bootom-10 mt-2 mb-4"></div>
-                                <Link href='/Booking'>
+                                <Link href='/Location'>
                                     <button
                                         className="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                         type="button">
@@ -209,7 +209,7 @@ export default function tryoga() {
                                     <div className="flex justify-between">
                                         <h3 className="text-xl font-medium">Monthly plan</h3>
                                         <div className="">
-                                            <span className="text-xl font-medium">€300</span>
+                                            <span className="text-xl font-medium">€240</span>
                                             <span className="text-gray-400">/month</span>
                                         </div>
                                     </div>
@@ -219,18 +219,18 @@ export default function tryoga() {
                                 <div className="border-t border-gray-200 m-bootom-10 my-2"></div>
                                 <p>Duration 60 minutes</p>
                                 <div className="border-t border-gray-200 m-bootom-10 my-2"></div>
-                                <p>Weekly three sessions</p>
+                                <p>Weekly 4 sessions and total of 16 sessions</p>
                                 <div className="border-t border-gray-200 m-bootom-10 my-2"></div>
-                                <p>Choose the date and time that fits you</p>
+                                <p>Choose the location, date and time that fits you</p>
                                 <div className="border-t border-gray-200 m-bootom-10 mt-2 mb-4"></div>
                                 <button
                                     className="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                     type="button">
-                                    Button
+                                    Launching Soon
                                 </button>
                             </div>
                             <div className="py-3 px-5 bg-gray-100">
-                                    Weekly workout plan
+                                    Monthly workout plan
                             </div> 
                         </div>
                         {/**Card three ending */}
