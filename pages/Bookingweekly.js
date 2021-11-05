@@ -9,8 +9,9 @@ export default function Bookingweekly() {
             <Head>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta charSet="utf-8" />
-                <title>Breath of Yoga</title>
-                <meta name="description" content="Enjoy Yoga workout for your body, breath and mind in Luxembourg " />
+                <title>Breath of Yoga |Yoga in Luxembourg| De stress | Energise</title>
+                <meta name="description" content="Enjoy Yoga workout for your body, breath and mind in Luxembourg. 
+                Learn the impact of breath on your emotions. Present moment awareness through your breath and mind." />
                 <meta name="google-site-verification" content="zX1PEdcO-DPbHLwHEXuhKeyNuh9AgAK3cfvx1zgUbYA" />
             </Head>
             <Navbar/>

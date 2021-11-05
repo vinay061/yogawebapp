@@ -13,8 +13,9 @@ function about() {
            <Head>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta charSet="utf-8" />
-                <title>Breath of Yoga</title>
-                <meta name="description" content="Enjoy Yoga workout for your body, breath and mind in Luxembourg " />
+                <title>Breath of Yoga |Yoga in Luxembourg| Meditation | Emotions</title>
+                <meta name="description" content="Enjoy Yoga workout for your body, breath and mind in Luxembourg. 
+                Learn some of the breathing techniques to relax your mind and body. Explore tools to practice at home" />
                 <meta name="google-site-verification" content="zX1PEdcO-DPbHLwHEXuhKeyNuh9AgAK3cfvx1zgUbYA" />
             </Head>
 
