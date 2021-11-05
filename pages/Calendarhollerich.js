@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Head from 'next/head'
 
-export default function Bookingweekly() {
+export default function Calendarhollerich() {
     return (
         <div>
             <Head>
@@ -19,7 +19,8 @@ export default function Bookingweekly() {
                 <h1>*Note: </h1>
                 <p>Please select the date and time for the first day only</p>
             </div>
-            <iframe src="https://koalendar.com/e/weekly-yoga-session?embed=true" width="100%" height="800px" frameBorder="0"></iframe>
+            {/* <iframe src="https://koalendar.com/e/yoga-weekly-session-hollerich?embed=true" width="100%" height="800px" frameBorder="0"></iframe> */}
+            <iframe src="https://koalendar.com/e/test-beggen?embed=true" width="100%" height="800px" frameBorder="0"></iframe>
             <Footer/>
         </div>
     )

@@ -26,7 +26,7 @@ export default function Booking() {
     const [dayThree, setDayThree] = useState(null)
     const [dayFour, setDayFour] = useState(null)
     const [emailUser, setEmailUser] = useState('')
-    const location = 'Beggen: Rythm & Soul'
+    const location = 'Hollerich'
 
     //converting date and time
     const firstday = new Date(dayOne)
@@ -43,9 +43,13 @@ export default function Booking() {
     const formatDayThree = format(zonedDayThree, 'yyyy-MM-dd HH:mm:ss zzz', {timeZone: 'Europe/Luxembourg'})
     const formatDayFour = format(zonedDayFour, 'yyyy-MM-dd HH:mm:ss zzz', {timeZone: 'Europe/Luxembourg'})
 
-    //dates for Beggen: Rythm and Soul
-    const dateBeggen = [new Date(2021, 10, 5), new Date(2021, 10, 6), new Date(2021, 10, 7),
+   
+    //dates for Hollerich: Flow-studio
+    const dateHollerich = [new Date(2021,10,5), new Date(2021, 10, 6), 
+                           new Date(2021, 10, 7)
                         ]
+
+
     const isWeek = (date) => {
         const day = date.getDay()
         return day !==0 && day !==6
@@ -54,10 +58,22 @@ export default function Booking() {
     const months = new Date()
     const currentMonth = months.toLocaleString('default', { month: 'long'})
     // console.log(currentMonth)
-
-    const timeBeggen = [setHours(setMinutes(new Date(),0), 13),
-                        setHours(setMinutes(new Date(),0), 14)
-                       ]
+    
+    //exclude time for Hollerich
+    const timeHollerich = [setHours(setMinutes(new Date(),0), 8),
+                           setHours(setMinutes(new Date(),0), 9),
+                           setHours(setMinutes(new Date(),0), 10),
+                           setHours(setMinutes(new Date(),0), 11),
+                           setHours(setMinutes(new Date(),0), 12),
+                           setHours(setMinutes(new Date(),0), 13),
+                           setHours(setMinutes(new Date(),0), 14),
+                           setHours(setMinutes(new Date(),0), 15),
+                           setHours(setMinutes(new Date(),0), 16),
+                           setHours(setMinutes(new Date(),0), 17),
+                           setHours(setMinutes(new Date(),0), 18),
+                           setHours(setMinutes(new Date(),0), 19)
+                          ]
+   
 
      const MyContainer = ({className, children}) => {
         return(
@@ -126,23 +142,17 @@ export default function Booking() {
                             </label>
                             <div className="mb-3 pt-0 sm:ml-20 md:ml-20 lg:ml-20 xl:ml:20">
                             <label className="font-bold mb-1 mr-2 text-white block">
-                                Beggen: Rythm & Soul
+                                Hollerich: Flow-Studio
                             </label>
                                 
                             </div>
                         </div>
                     </div>
 
-                {/** Check for the location and display as required */}
-                {
-                    
-                }
-                {/** End of location check */}
-
-                {/** Location: Beggen */}
+                {/** Location: Hollerich */}
 
 
-                {/** to be deleted */}
+               
                 {/**Day One */}
                 <div className="container flex items-center justify-center bg-gray-500 mx-auto pt-4">
                     <div className="sm:flex md:flex lg:flex xl:flex 2xl:flex">
@@ -157,15 +167,15 @@ export default function Booking() {
                                 onFocus={handleKeyboardTrigger}
                                 onChange={(date) => setDayOne(date)}
                                 calendarContainer={MyContainer}
-                                excludeDates={dateBeggen}
+                                excludeDates={dateHollerich}
                                 filterDate={isWeek}
                                 showTimeSelect
                                 timeFormat="p"
                                 timeIntervals={60}
                                 placeholderText="Click to select a date and time"
-                                minTime={setHours(setMinutes(new Date(), 0), 8)}
-                                maxTime={setHours(setMinutes(new Date(), 30), 19)}
-                                excludeTimes={timeBeggen}
+                                minTime={setHours(setMinutes(new Date(), 0), 6)}
+                                maxTime={setHours(setMinutes(new Date(), 30), 8)}
+                                excludeTimes={timeHollerich}
                                 dateFormat="MMMM, d;  h:mm aa"
                                 className="px-2 py-1 placeholder-gray-400 text-gray-600 
                                             relative bg-white bg-white rounded text-sm border 
@@ -191,15 +201,15 @@ export default function Booking() {
                                     onFocus={handleKeyboardTrigger}
                                     onChange={(date) => setDayTwo(date)}
                                     calendarContainer={MyContainer}
-                                    excludeDates={dateBeggen}
+                                    excludeDates={dateHollerich}
                                     filterDate={isWeek}
                                     showTimeSelect
                                     timeFormat="p"
                                     timeIntervals={60}
                                     placeholderText="Click to select a date and time"
-                                    minTime={setHours(setMinutes(new Date(), 0), 8)}
-                                    maxTime={setHours(setMinutes(new Date(), 30), 19)}
-                                    excludeTimes={timeBeggen}
+                                    minTime={setHours(setMinutes(new Date(), 0), 6)}
+                                    maxTime={setHours(setMinutes(new Date(), 30), 8)}
+                                    excludeTimes={timeHollerich}
                                     dateFormat="MMMM, d;  h:mm aa"
                                     className="px-2 py-1 placeholder-gray-400 text-gray-600 
                                         relative bg-white bg-white rounded text-sm border 
@@ -225,15 +235,15 @@ export default function Booking() {
                                     onFocus={handleKeyboardTrigger}
                                     onChange={(date) => setDayThree(date)}
                                     calendarContainer={MyContainer}
-                                    excludeDates={dateBeggen}
+                                    excludeDates={dateHollerich}
                                     filterDate={isWeek}
                                     showTimeSelect
                                     timeFormat="p"
                                     timeIntervals={60}
                                     placeholderText="Click to select a date and time"
-                                    minTime={setHours(setMinutes(new Date(), 0), 8)}
-                                    maxTime={setHours(setMinutes(new Date(), 30), 19)}
-                                    excludeTimes={timeBeggen}
+                                    minTime={setHours(setMinutes(new Date(), 0), 6)}
+                                    maxTime={setHours(setMinutes(new Date(), 30), 8)}
+                                    excludeTimes={timeHollerich}
                                     dateFormat="MMMM, d;  h:mm aa"
                                     className="px-2 py-1 placeholder-gray-400 text-gray-600 
                                         relative bg-white bg-white rounded text-sm border 
@@ -259,15 +269,15 @@ export default function Booking() {
                                     onFocus={handleKeyboardTrigger}
                                     onChange={(date) => setDayFour(date)}
                                     calendarContainer={MyContainer}
-                                    excludeDates={dateBeggen}
+                                    excludeDates={dateHollerich}
                                     filterDate={isWeek}
                                     showTimeSelect
                                     timeFormat="p"
                                     timeIntervals={60}
                                     placeholderText="Click to select a date and time"
-                                    minTime={setHours(setMinutes(new Date(), 0), 8)}
-                                    maxTime={setHours(setMinutes(new Date(), 30), 19)}
-                                    excludeTimes={timeBeggen}
+                                    minTime={setHours(setMinutes(new Date(), 0), 6)}
+                                    maxTime={setHours(setMinutes(new Date(), 30), 7)}
+                                    excludeTimes={timeHollerich}
                                     dateFormat="MMMM, d;  h:mm aa"
                                     className="px-2 py-1 placeholder-gray-400 text-gray-600 
                                         relative bg-white bg-white rounded text-sm border 
@@ -311,7 +321,7 @@ export default function Booking() {
                                 <div className="container flex items-center justify-center bg-gray-500 mx-auto pt-4 mb-5"> {/**md:py-10 increses the padding for medium screen */}
                                     <div className="flex">
                                         <div className="mb-3 pt-0 mr-3">
-                                            <Link href='/Bookingweekly'>
+                                            <Link href='/Calendarhollerich'>
                                                 <button type="submit" onClick={submit} 
                                                     className="px-6 py-2 font-semibold select-none rounded-md 
                                                         text-white bg-gray-900 hover:bg-gray-800"
