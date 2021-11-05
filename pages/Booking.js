@@ -108,8 +108,9 @@ export default function Booking() {
             <Head>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta charSet="utf-8" />
-                <title>Breath of Yoga</title>
-                <meta name="description" content="Enjoy Yoga workout for your body, breath and mind in Luxembourg " />
+                <title>Breath of Yoga |Yoga in Luxembourg| Breath | Mental Health</title>
+                <meta name="description" content="Enjoy Yoga workout for your body, breath and mind in Luxembourg. 
+                Lead a stress free and joyful life. Learn the secret to be in the present moment. Breath awareness" />
                 <meta name="google-site-verification" content="zX1PEdcO-DPbHLwHEXuhKeyNuh9AgAK3cfvx1zgUbYA" />
             </Head>
             <Navbar/>
@@ -133,16 +134,10 @@ export default function Booking() {
                         </div>
                     </div>
 
-                {/** Check for the location and display as required */}
-                {
-                    
-                }
-                {/** End of location check */}
-
+                
                 {/** Location: Beggen */}
 
 
-                {/** to be deleted */}
                 {/**Day One */}
                 <div className="container flex items-center justify-center bg-gray-500 mx-auto pt-4">
                     <div className="sm:flex md:flex lg:flex xl:flex 2xl:flex">
