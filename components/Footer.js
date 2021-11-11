@@ -13,26 +13,30 @@ const Footer = () => {
                                 <span className="font-bold text-white uppercase mb-2">BOOKINGS</span>
                                 <span className="my-2">
                                     <Link href="/Booking">
-                                        <a href="#" className="text-white  text-md hover:text-blue-500">WEEKLY CLASS BOOKING</a>
+                                        <a href="#" className="text-white  text-md hover:text-blue-500">BOOK AT BEGGEN(R&S)</a>
                                     </Link>
                                 </span>
-                                <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">MONTHLY CLASS BOOKING</a></span>
-                                <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">SINGLE DAY BOOKING</a></span>
+                                <span className="my-2">
+                                    <Link href="/Bookinghollerich">
+                                        <a href="#" className="text-white  text-md hover:text-blue-500">BOOK AT HOLLERICH(Flow studio)</a>
+                                    </Link>
+                                </span>
+                                {/* <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">SINGLE DAY BOOKING</a></span> */}
                             </div>
-                            {/**Footer header 2 commented */}
-                            {/* <div className="flex flex-col">
-                                <span className="font-bold text-white uppercase mt-4 md:mt-0 mb-2">Footer header 2</span>
-                                <span className="my-2"><a href="#" className="text-white text-md hover:text-blue-500">link 1</a></span>
-                                <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">link 1</a></span>
-                                <span className="my-2"><a href="#" className="text-white text-md hover:text-blue-500">link 1</a></span>
-                            </div> */}
-                            {/**Footer header 3 commented */}
-                            {/* <div className="flex flex-col">
-                                <span className="font-bold text-white uppercase mt-4 md:mt-0 mb-2">Footer header 3</span>
-                                <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">link 1</a></span>
-                                <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">link 1</a></span>
-                                <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">link 1</a></span>
-                            </div> */}
+                            {/**Footer 2  */}
+                            <div className="flex flex-col">
+                                <span className="font-bold text-white uppercase mt-4 md:mt-0 mb-2">Contact</span>
+                                <span className="my-2"><a href="#" className="text-white text-md hover:text-blue-500">vinay@breathofyoga.lu</a></span>
+                                <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">+352 661137338</a></span>
+                                {/* <span className="my-2"><a href="#" className="text-white text-md hover:text-blue-500">link 1</a></span> */}
+                            </div>
+                            {/**Footer  3  */}
+                            <div className="flex flex-col">
+                                <span className="font-bold text-white uppercase mt-4 md:mt-0 mb-2">Details</span>
+                                <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">VAT: LU33288828</a></span>
+                                {/* <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">link 1</a></span> */}
+                                {/* <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">link 1</a></span> */}
+                            </div>
                             <div className="flex flex-col">
                                 <span className="font-bold text-white uppercase mt-4 md:mt-0 mb-2">Follow us on</span>
                                 <button className="bg-blue-500 px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded transform hover:scale-110 transition duration-500">

@@ -20,8 +20,7 @@ export default function Calendarhollerich() {
                 <h1>*Note: </h1>
                 <p>Please select the date and time for the first day only</p>
             </div>
-            {/* <iframe src="https://koalendar.com/e/yoga-weekly-session-hollerich?embed=true" width="100%" height="800px" frameBorder="0"></iframe> */}
-            <iframe src="https://koalendar.com/e/test-beggen?embed=true" width="100%" height="800px" frameBorder="0"></iframe>
+            <iframe src="https://koalendar.com/e/yoga-weekly-session-hollerich?embed=true" width="100%" height="800px" frameBorder="0"></iframe>
             <Footer/>
         </div>
     )
