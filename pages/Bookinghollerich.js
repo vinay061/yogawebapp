@@ -45,8 +45,11 @@ export default function Booking() {
 
    
     //dates for Hollerich: Flow-studio
-    const dateHollerich = [new Date(2021,10,5), new Date(2021, 10, 6), 
-                           new Date(2021, 10, 7)
+    const dateHollerich = [new Date(2021,10,5), new Date(2021, 10, 12), 
+                           new Date(2021, 10, 19), new Date(2021, 10, 26),
+                           new Date(2021, 11, 3), new Date(2021, 11, 10),
+                           new Date(2021, 11, 17), new Date(2021, 11, 24),
+                           new Date(2021, 11, 31)
                         ]
 
 

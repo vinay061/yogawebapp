@@ -9,7 +9,7 @@ const Navbar = () => {
                 <div className="flex items-center flex-shrink-0 text-white mr-6">
                     <Link href="/">
                     <a className="text-white no-underline hover:text-white hover:no-underline" href="#">
-                        <span className="text-2xl pl-2"><i className="em em-grinning"></i> BROY</span>
+                        <span className="text-2xl pl-2"><i className="em em-grinning"></i>Breath of Yoga</span>
                     </a>
                     </Link>
                    
@@ -28,23 +28,25 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li className="mr-3">
-                            <Link href="/about">
+                            <Link href="/Profile">
                             <a className="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4">ABOUT</a>
                             </Link>
                         </li>
-                        <li className="mr-3">
+                        {/* <li className="mr-3">
                             <Link href="/Booking">
                             <a className="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">WEEKLY BOOKING</a>
                             </Link>
-                        </li>
-                        <li className="mr-3">
+                        </li> */}
+                        {/* <li className="mr-3">
                             <Link href='#'>
                                 <a className="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4">MONTHLY BOOKING</a>
                             </Link>
+                        </li> */}
+                        {/* <li>
                             <Link href='#'>
                                 <a className="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4">SINGLE DAY BOOKING</a>
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
                 <div className="block lg:hidden">
@@ -76,7 +78,7 @@ const Navbar = () => {
                                </Link>
                             </li>
                             <li className="py-2">
-                                 <Link href="/about">
+                                 <Link href="/Profile">
                                    <a className="hover:text-gray-200">ABOUT</a>
                                 </Link>
                             </li>

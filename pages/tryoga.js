@@ -42,15 +42,14 @@ export default function tryoga() {
       </div>
 
   </div>
-  {/* <!-- Card --> */}
-            <div className="container mx-auto bg-yellow-200">
-            <div className="p-10">
-            <Image src={gyoga} 
-                   alt="group yoga"
-                  />
-            </div>
-           
-            </div>
+  {/* Image */}
+            {/* <div className="container mx-auto bg-yellow-200">
+                <div className="p-10">
+                    <Image src={gyoga} 
+                        alt="group yoga"
+                    />
+                </div>
+            </div> */}
             
             
             
