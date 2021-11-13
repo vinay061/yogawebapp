@@ -79,7 +79,7 @@ function Profile() {
                                  <p className="text-sm">
                                     The techniques that I practice is time tested and has been used and enjoyed throughout the world.
                                     It is very natural for me to share what I have been practicing for more than a decade. I would like
-                                    to help people experience to uncover the happiness that is already within. The other huge benefits of Yoga
+                                    to help people experience & uncover the happiness that is already within. The other huge benefits of Yoga
                                     such as strength, flexibility and emotional well-being is a natural phenomena that results with 
                                     continous practice.
                                  </p>
