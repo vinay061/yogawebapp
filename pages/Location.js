@@ -4,6 +4,8 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Image from 'next/dist/client/image'
 import pic from '../public/images/cardone.jpg'
+import picone from '../public/images/yoga.webp'
+import pictwo from '../public/images/luxembourg.webp'
 import cardtwo from '../public/images/cardtwo.jpg'
 import Head from 'next/head'
 
@@ -52,7 +54,7 @@ export default function Location() {
                         </div>
                     </div>
                     <div className="w-sm">
-                        <Image src={pic} className='' alt="pic of yog" />
+                        <Image src={picone} className='' alt="pic of yog" />
                         <div className="mt-4 text-green-600 text-center">
                             <h1 className="text-xl font-bold">Beggen: Rythm and Soul</h1>
                             <p className="mt-4 text-gray-600">Address: 233-241 Rue de Beggen, 1221 Luxembourg</p>
@@ -73,7 +75,7 @@ export default function Location() {
                         </div>
                     </div>
                     <div className="w-sm">
-                        <Image src={cardtwo} alt="cardtwo" />
+                        <Image src={pictwo} alt="cardtwo" />
                             <div className="mt-4 text-green-600 text-center">
                                 <h1 className="text-xl font-bold">Hollerich: Flow-Studio</h1>
                                 <p className="mt-4 text-gray-600">89 Rue de Hollerich, 1741 Luxembourg</p>
