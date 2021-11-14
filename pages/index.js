@@ -1,5 +1,7 @@
 import Image from "next/dist/client/image"
 import pic from '../public/images/cardone.jpg'
+import picone from '../public/images/yoga.webp'
+import pictwo from '../public/images/luxembourg.webp'
 import cardtwo from '../public/images/cardtwo.jpg'
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
@@ -33,7 +35,7 @@ function about() {
                         {/*<!-- box-1 -->*/}
                         <div className="mt-16 py-4 px-4 bg-whit w-72 bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:scale-110 transition duration-500 mx-auto md:mx-0">
                             <div className="w-sm">
-                                <Image src={pic} className='' alt="pic of yog" />
+                                <Image src={picone} className='' alt="pic of yog" />
                                 <div className="mt-4 text-green-600 text-center">
                                     <h1 className="text-xl font-bold">Hatha Yoga</h1>
                                     <p className="mt-4 text-gray-600">Yoga performed with tradional asanas and meditation</p>
@@ -49,7 +51,7 @@ function about() {
                         {/*<!-- box-2 -->*/}
                         <div className="mt-16 py-4 px-4 bg-whit w-72 bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:scale-110 transition duration-500 mx-auto md:mx-0">
                             <div className="w-sm">
-                                <Image src={cardtwo} alt="cardtwo" />
+                                <Image src={pictwo} alt="cardtwo" />
                                 <div className="mt-4 text-green-600 text-center">
                                     <h1 className="text-xl font-bold">108 Yoga Asanas</h1>
                                     <p className="mt-4 text-gray-600">Sun Salutations to increase strength, flexibility and relaxation</p>
@@ -61,7 +63,7 @@ function about() {
                         {/*<!-- box-3 -->*/}
                         <div className="mt-16 py-4 px-4 bg-whit w-72 bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:scale-110 transition duration-500 mx-auto md:mx-0">
                             <div className="w-sm">
-                                <Image src={pic} alt="pic of yog" />
+                                <Image src={picone} alt="pic of yog" />
                                 <div className="mt-4 text-green-600 text-center">
                                     <h1 className="text-xl font-bold">Running / Joging Yoga</h1>
                                     <p className="mt-4 text-gray-600">For people who love running and help you run better through yogic practices</p>
