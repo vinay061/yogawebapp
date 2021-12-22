@@ -38,3 +38,7 @@ yarn-error.log*
 /notes.js
 /lib/posts.js
 /pages/Bloghome.js
+backend
+./backend
+/backend
+/backend/database.js

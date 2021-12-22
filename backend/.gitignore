@@ -1,2 +1,4 @@
 # dependencies
-/node_modules/ line
+/database.js
+/index.js
+/node_modules
