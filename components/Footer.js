@@ -30,9 +30,12 @@ const Footer = () => {
                                 <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">+352 661137338</a></span>
                                 {/* <span className="my-2"><a href="#" className="text-white text-md hover:text-blue-500">link 1</a></span> */}
                             </div>
-                            {/**Footer  3  */}
+                            {/**Footer 3*/}
                             <div className="flex flex-col">
                                 <span className="font-bold text-white uppercase mt-4 md:mt-0 mb-2">Details</span>
+                                <Link href="/Cmsdata">
+                                    <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">YOGA BLOG</a></span>
+                                </Link>
                                 <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">VAT: LU33288828</a></span>
                                 {/* <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">link 1</a></span> */}
                                 {/* <span className="my-2"><a href="#" className="text-white  text-md hover:text-blue-500">link 1</a></span> */}
