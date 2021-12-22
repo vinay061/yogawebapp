@@ -32,6 +32,11 @@ const Navbar = () => {
                             <a className="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4">ABOUT</a>
                             </Link>
                         </li>
+                        <li className="mr-3">
+                            <Link href="/Cmsdata">
+                            <a className="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4">BLOG</a>
+                            </Link>
+                        </li>
                         {/* <li className="mr-3">
                             <Link href="/Booking">
                             <a className="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">WEEKLY BOOKING</a>
