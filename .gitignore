@@ -42,3 +42,4 @@ backend
 ./backend
 /backend
 /backend/database.js
+/pages/Nav.js
