@@ -2,11 +2,16 @@ import Head from "next/dist/shared/lib/head"
 import Image from "next/dist/client/image"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
+import profile from "../public/images/keukp1.JPG"
 
 function Profile() {
 
     const mobileStyle = {
         backgroundImage: 'url(https://breathofyoga.fra1.digitaloceanspaces.com/keukp1.jpg)'
+    }
+
+    const mobilePic = {
+        backgroundImage: "../public/images/keukp1.JPG"
     }
 
     const backGround = {
@@ -35,10 +40,14 @@ function Profile() {
                             shadow-2xl bg-white opacity-75 mx-6 lg:mx-0">
                             <div className="p-4 md:p-12 text-left sm:text-center lg:text-left mt-32 lg:mt-12">
 			                {/* <!-- Image for mobile view--> */}
-                                <div className="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" 
-                                    style={mobileStyle}>
-                                </div>
-                                <h1 className="text-3xl font-bold pt-8 lg:pt-0">Vinay Kumar</h1>
+                                {/* <div className="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" 
+                                    style={mobilePic}> */}
+                                    <div className="lg:hidden">
+                                        <Image className="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" src={profile} alt="mobile img"/>
+                                    </div>
+                                   
+                                {/* </div> */}
+                               <h1 className="text-3xl font-bold pt-8 lg:pt-0">Vinay Kumar</h1>
                                 <div className="mx-0 lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
                                 <p className="pt-4 text-base font-bold flex items-center justify-center lg:justify-start">
                                     <svg className="h-4 fill-current text-green-700 pr-4" xmlns="http://www.w3.org/2000/svg" 
@@ -120,15 +129,12 @@ function Profile() {
                             </div>
                         </div>
                         {/** Image Column */}
-                        <div className="w-full lg:w-2/5">
+                        <div className="lg:w-2/5 hidden lg:block">
 		                    {/**<!-- Big profile image for side bar (desktop) lg:w-2/5*/}
-                            {/* <Image src={} alt="Profile Image"/> */}
-                            <img src="https://breathofyoga.fra1.digitaloceanspaces.com/keukp1.jpg" 
-                             className="rounded-none lg:rounded-lg shadow-2xl hidden lg:block" alt="Profile Image"/>
-                             
-		
-		
-	                    </div>
+                            <Image className="lg:block" src={profile} alt="Profile Image"/>
+                            {/* <img src="https://breathofyoga.fra1.digitaloceanspaces.com/keukp1.jpg" 
+                             className="rounded-none lg:rounded-lg shadow-2xl hidden lg:block" alt="Profile Image"/> */}
+                        </div>
                 </div>
             </div>
             <Footer/>
